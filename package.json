@@ -1,0 +1,17 @@
+{
+  "name": "markup-ventures",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "typecheck": "npm run typecheck -w apps/web",
+    "test:chart": "node --experimental-strip-types --test tests/telemetry-chart.test.mjs tests/metric-condition.test.mjs"
+  },
+  "devDependencies": {
+    "agent-browser": "^0.38.1",
+    "prettier": "^3.9.9"
+  }
+}
